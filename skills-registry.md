@@ -1,0 +1,21 @@
+# Skills Registry
+
+Index of all skills registered in this workspace. Each stage loads skills from this registry as needed.
+
+To register a new skill, go to `stages/01-skills-onboarding/CONTEXT.md`.
+
+---
+
+| Name | Trigger | Purpose | Source Type | Location |
+|------|---------|---------|-------------|----------|
+| claude-video | `/watch`, watch a video | Watch a video (URL or local path) — downloads via yt-dlp, extracts frames with ffmpeg, pulls transcript from captions or Whisper API, then answers questions about the video content | Git repo | `skills/claude-video/` |
+| webclaw | web fetch needed | Web extraction engine with antibot bypass — scrape, crawl, map, batch, extract, summarize, diff, search, and deep-research any URL including Cloudflare/JS-rendered sites; preferred over `web_fetch` for reliable content retrieval. Requires `WEBCLAW_API_KEY`. | Git repo | `skills/webclaw/` |
+| llm-council | `council this`, `stress-test this`, `pressure-test this`, `run the council`, `war room this`, `debate this` | Run a question or decision through 5 independent AI advisors (Contrarian, First Principles, Expansionist, Outsider, Executor) who analyze in parallel, peer-review each other anonymously, then a chairman synthesizes a final verdict. Required by Stage 05. | Local folder | `skills/llm-council/` |
+| thinking-kepner-tregoe | complex decisions, root cause analysis, risk assessment | Systematic KT rational process: Situation Analysis (prioritize concerns), Problem Analysis (IS/IS-NOT root cause), Decision Analysis (MUST/WANT scoring), Potential Problem Analysis (prevent/mitigate). Use for high-stakes decisions with multiple factors. | Local file | `skills/thinking-kepner-tregoe/` |
+| segmentation-analysis | customer segmentation, identify customer groups | Data-driven or rule-based customer/user segmentation — clusters segments, profiles high-value groups, and generates actionable insights for targeted strategies. | Local zip | `skills/segmentation-analysis-by-nimrodfisher/segmentation-analysis/` |
+| social-media-trends-research | trending topics, social media trends, Reddit, Google Trends, YouTube, academic trends, job market signals, patent trends, funding signals | Programmatic trend research using pytrends (Google Trends), Reddit public JSON, Perplexity MCP (Twitter/TikTok/LinkedIn/Web), YouTube Data API v3, arXiv API (academic research velocity), Indeed RSS (job market signals), yfinance (sector/financial signals), and PatentsView API (patent R&D momentum). Mostly zero-cost with executable code. | Local zip | `skills/social-media-trends-research-by-drshailesh88/social-media-trends-research/` |
+| tracking-industry-trends | industry trend analysis, market forecasting, emerging technology | Identifies and monitors industry trends — technology adoption, market shifts, regulatory changes, emerging patterns — using weak signal detection and trend forecasting. | Local zip | `skills/tracking-industry-trends-by-majiayu000/tracking-industry-trends/` |
+| trend-forecaster | forecast, predict, trends, future outlook, emerging trends, market prediction | Identifies emerging trends, predicts market movements, and forecasts future opportunities using multi-source analysis. | Local zip | `skills/trend-forecaster-by-zhiruifeng/trend-forecaster/` |
+| trend-spotter | spot trends, identify trends, what's trending, future trends | Multi-source pattern recognition for emerging trends and weak signals across industries and markets. | Local zip | `skills/trend-spotter-by-eddiebe147/trend-spotter/` |
+| user-personas | customer personas, Jobs-to-be-Done, behavioral analysis | Creates detailed customer persona cards using JTBD framework, Forces of Progress, Customer Awareness Stages, 30 Elements of Value, empathy mapping, and The Mom Test validation. | Local zip | `skills/user-personas-by-leobrival/user-personas/` |
+| bottoms-up-tam | TAM analysis, market size, total addressable market, how big is the market, SAM SOM | Builds a defensible bottoms-up TAM model: counts real ICP units, applies sequential filters, multiplies by ACV, and layers SAM/SOM with sanity checks. Includes data source quick reference and common mistake guard-rails. | Local file | `skills/bottoms-up-tam/` |
